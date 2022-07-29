@@ -1,0 +1,61 @@
+В приложении можно создавать новых пользователей банка, из них можно выбирать бенефициаров. Добавлять важные финансовые новости. Принимать жалобы от клиентов. Создавать менеджеров с root правами.
+
+Таблицы связаны внутри приложения через dto ResponseData
+
+
+Controller
+AdminRegisterController
+Post запрос http://localhost:8080/addlogin создает root пользователя
+Get запрос http://localhost:8080/bankapplogin показывает содержание всех таблиц
+
+
+BeneficiaryController
+Post запрос http://localhost:8080/addBeneficiary добавить бенефициара
+Get запрос http://localhost:8080/allbeneficiary?customerid=1 показывает бенефициара под ID = 1
+Delete запрос http://localhost:8080/beneficiary?beneficiaryid=1 удаляет бенефициара по ID = 1
+
+CustomersController
+Post запрос http://localhost:8080/addcustomer добавить пользователя
+Get запрос http://localhost:8080/allcustomers показать всех пользователей
+Put запрос http://localhost:8080/updatecustomers обновить данные пользователя
+Get запрос http://localhost:8080/customer?сustomerid=1 показывает пользователя под ID = 1
+Delete запрос  http://localhost:8080/deletecustomer?сustomerid=1 удаляет пользователя под ID = 1
+Get запрос http://localhost:8080/validatebeneficiary?first=___&first=___&accountno=___ проверка пользователя по нескольким параметрам
+Get запрос http://localhost:8080/getpassword?сustomerid=1 запрос пароля пользователя под ID = 1
+Get запрос http://localhost:8080/debitcal?сustomerid=__&accountno =___&accountno =___ перевод денежных средств
+Get запрос http://localhost:8080/changepassword?сustomerid=1 изменение пароля пользователя под ID = 1
+
+
+GrevianceController
+Post запрос http://localhost:8080/addgrevieance добавить жалобу
+Get запрос http://localhost:8080/allgrevieance?grevieanceid=1 показывает жалобы для пользователя под ID = 1
+Get запрос http://localhost:8080/acceptgrevience?grevieanceid=1 принятая жалоба для пользователя под ID = 1
+Get запрос http://localhost:8080/declinegrevience?grevieanceid=1 непринятая жалоба для пользователя под ID = 1
+
+Get запрос http://localhost:8080/allqueue все полученные жалобы
+
+NewsController
+Post запрос http://localhost:8080/postnews добавить новость
+Get запрос http://localhost:8080/allnews показать все новости
+
+
+TransactionsController
+Post запрос http://localhost:8080/addtransaction добавить новую транзакцию
+Get запрос http://localhost:8080/transactions?сustomerid=1 показать транзакции для для пользователя под ID = 1
+Get запрос http://localhost:8080/transactionbyname? Beneficiaryname=___ показать транзакции по имени бенефициара
+Get запрос http://localhost:8080/alltransactions показать все транзакции
+
+
+Entites
+AddNews
+Таблица содержит новости для клиентов
+Beneficiary
+Таблица с бенефициарами из числа пользователей
+Customers
+Таблица с пользователями
+Greviance
+Таблица с жалобами пользователей на банк
+Logins
+Таблица с администраторами с root правами
+Transactions
+Таблица с транзакциями пользователей

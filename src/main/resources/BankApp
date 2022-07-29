@@ -1,0 +1,18 @@
+INSERT INTO public.customers (customerid, aadhar, accountno, address, balance, branch, dob, email, first, gender, last, password, phone, pin, type, username) VALUES (2, '3', '9561', 'Baghdad', 8000, 'clerk', '050688', 'me@yandex.ru', 'Nil', 'Man', 'Abramson', '12345', '682589', '481126', 'user', '1Abramson');
+INSERT INTO public.customers (customerid, aadhar, accountno, address, balance, branch, dob, email, first, gender, last, password, phone, pin, type, username) VALUES (3, '2', '5448', 'Ankara', 10000, 'clerk', '011266', 'you@yandex.ru', 'Rex', 'Man', 'Donovan', 'kil99', '236596', '223364', 'user', 'Donovan2');
+INSERT INTO public.customers (customerid, aadhar, accountno, address, balance, branch, dob, email, first, gender, last, password, phone, pin, type, username) VALUES (1, '1', '1245', 'Penza', 4000, 'clerk', '020396', 'max@yandex.ru', 'Max', 'Man', 'Kud', '333', '654444', '444555', 'user', 'Max1');
+INSERT INTO public.customers (customerid, aadhar, accountno, address, balance, branch, dob, email, first, gender, last, password, phone, pin, type, username) VALUES (4, '4', '1542', 'Amsterdam', 5000, 'clerk', '250693', 'we@yandex.ru', 'Scot', 'Man', 'Larkins', '99gh', '456235', '998143', 'user', 'Larkins1');
+
+INSERT INTO public.transactions (trasactionid, account_no, beneficiaryname, credit, customerid, date, debit, remarks, sender_name) VALUES (1, '1245', 'Max', 10, 1, '29072022', 10, 'no', 'Abramson');
+
+INSERT INTO public.beneficiary (beneficiaryid, account_no, customerid, first_name, last_name, phone, user_name) VALUES (3, '1245', 1, 'Max', 'Kud', '444555', 'Max1');
+
+INSERT INTO public.greviance (grevieanceid, customerid, details, first_name, service, status) VALUES (1, 1, 'default', 'Max', 'user', 'ok');
+
+INSERT INTO public.logins (loginid, email, password, roles) VALUES (1, 'max@yandex.ru', '1991', 'admin');
+
+INSERT INTO public.addnews (newsid, newsdetails, newshead) VALUES (1, 'default in limpopo', 'default');
+
+
+
+
